@@ -63,8 +63,8 @@ void SumGauss(int i, int n, int sum)
 /// </summary>
 int main(void)
 {
-	int i = 1;		// 반복을 제어하기 위한 변수, 1로 초기화
-	int n = 0;		// 원하는 숫자
+	int i = 1;	// 반복을 제어하기 위한 변수, 1로 초기화
+	int n = 0;	// 원하는 숫자
 	int sum = 0;	// 합계
 
 	scanf_s("%d", &n);

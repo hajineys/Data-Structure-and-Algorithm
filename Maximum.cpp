@@ -15,6 +15,7 @@ int max4(int a, int b, int c, int d)
 
 int main(void)
 {
+	// 초기값 설정
 	int a = 4;
 	int b = 3;
 	int c = 2;

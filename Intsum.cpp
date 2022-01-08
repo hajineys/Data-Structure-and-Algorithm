@@ -37,22 +37,28 @@ void SumFor(int i, int n, int sum)
 }
 
 // 정수의 합 가우스의 덧셈 버전
-void SumGauss(int i, int n, int sum)
+void SumGauss(int n, int sum)
 {
+	// 전체 정수 개수 구하기
+	int range = n + 1;
+
 	// 정수의 개수가 짝수일 경우
 	if (n % 2 == 0)
 	{
-		// 맨 끝의 숫자에 1을 더하고
-		n += 1;
-
 		// 이 숫자에 전체 정수 개수를 2로 나눈 수를 곱한다
-		n *= (n / 2);
+		range *= (range / 2);
 
-		sum = n;
+		sum = range;
 	}
+	// 홀수일 경우
 	else
 	{
-		// 홀수일 경우
+		int middleNumber = range / 2;	// 1과 n사이의 중간 숫자를 구한다
+
+		range *= (n / 2);	// n의 절반을 총 정수 개수에 곱한다
+							// int형 변수기 때문에 소수점 뒷 자리는 날라간다
+
+		sum = range + middleNumber;		// 남은 중간 숫자를 최종적으로 더해준다
 	}
 
 	printf("가우스의 덧셈 : %d", sum);
@@ -73,5 +79,5 @@ int main(void)
 	printf("\n");
 	SumFor(i, n, sum);
 	printf("\n");
-	SumGauss(i, n, sum);
+	SumGauss(n, sum);
 }

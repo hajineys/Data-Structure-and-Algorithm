@@ -55,8 +55,9 @@ void SumGauss(int n, int sum)
 	{
 		int middleNumber = range / 2;	// 1과 n사이의 중간 숫자를 구한다
 
-		range *= (n / 2);	// n의 절반을 총 정수 개수에 곱한다
-							// int형 변수기 때문에 소수점 뒷 자리는 날라간다
+		// n의 절반을 총 정수 개수에 곱한다
+		// int형 변수기 때문에 소수점 뒷 자리는 날라간다
+		range *= (n / 2);	
 
 		sum = range + middleNumber;		// 남은 중간 숫자를 최종적으로 더해준다
 	}
